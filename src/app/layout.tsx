@@ -1,11 +1,7 @@
-import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Box } from "@mui/material";
-import Header from "@/components/Header";
-import Sidebar from "@/components/Sidebar";
+import Provider from "src/components/Provider"
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Youtube",
@@ -18,13 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        <div>
-          <Sidebar />
-          {children}
-        </div>
+    <html lang="en" className='light'>
+      <body>
+      {children}
       </body>
     </html>
   );
